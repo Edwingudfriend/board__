@@ -1,8 +1,7 @@
 <?php
-session_start();
+require '../app/start.php';
 //require "confirm.php";
 $student = $_SESSION['student'];
-require "bd_configure.php";
 
 
 // Escape user inputs for security
@@ -28,7 +27,7 @@ if($student){
 
 mysqli_query($link, $sql);
 if(mysqli_query($link, $sql1)){
-    echo '<META HTTP-EQUIV="Refresh" Content="0; URL= account.php">';
+    echo '<META HTTP-EQUIV="Refresh" Content="0; URL='.BASE_URL.'/account.php">';
     exit;
 }else{
     echo "Oops! Something went wrong. Please try again later.";
