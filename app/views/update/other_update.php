@@ -50,7 +50,7 @@ function sendText($number, $text){
         CURLOPT_CUSTOMREQUEST => 'POST',
         CURLOPT_POSTFIELDS => '{"from":"NEXTSMS", "to":"' . $number . '",  "text": "' . $text . '"}',
         CURLOPT_HTTPHEADER => array(
-            'Authorization: Basic bXdha2FsaW5nYTk4OnhTR0huYkU4dXliQEtM',
+            'Authorization: API ID',
             'Content-Type: application/json',
             'Accept: application/json'
         ),
@@ -410,4 +410,7 @@ if (isset($_POST['submit_btn'])) {
         echo "Oops! Something went wrong. Please try again later.";
     }
 }
+
+
+//Basic bXdha2FsaW5nYTk4OnhTR0huYkU4dXliQEtM
 ?>
